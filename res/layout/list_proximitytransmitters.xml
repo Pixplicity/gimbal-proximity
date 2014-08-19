@@ -1,0 +1,91 @@
+<!--
+    Copyright (C) 2013 Qualcomm Retail Solutions, Inc. All rights reserved.
+
+    This software is the confidential and proprietary information of Qualcomm
+    Retail Solutions, Inc.
+
+    The following sample code illustrates various aspects of the Gimbal Android
+    SDK.
+
+    The sample code herein is provided for your convenience, and has not been
+    tested or designed to work on any particular system configuration. It is
+    provided pursuant to the License Agreement for Gimbal Manager AS IS, and your
+    use of this sample code, whether as provided or with any modification, is at
+    your own risk. Neither Qualcomm Retail Solutions, Inc. nor any affiliate
+    takes any liability nor responsibility with respect to the sample code, and
+    disclaims all warranties, express and implied, including without limitation
+    warranties on merchantability, fitness for a specified purpose, and against
+    infringement.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="vertical"
+    android:padding="12dp"
+    tools:context=".ProximityTransmittersActivity" >
+
+    <LinearLayout
+        android:id="@+id/thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/image_bg"
+            android:padding="3dp"
+            android:src="@drawable/avatar_01_2x" />
+
+        <TextView
+            android:id="@+id/listTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:text="Gimbal name"
+            android:textColor="#040404"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:typeface="sans"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables" >
+
+            <TextView
+                android:id="@+id/temperatureTextField"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:text="78F"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/batteryImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@string/battery_level"
+                android:src="@drawable/battery_full" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:progressDrawable="@drawable/progress_bar" />
+
+</LinearLayout>

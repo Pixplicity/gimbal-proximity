@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+    Copyright (C) 2013 Qualcomm Retail Solutions, Inc. All rights reserved.
+
+    This software is the confidential and proprietary information of Qualcomm
+    Retail Solutions, Inc.
+
+    The following sample code illustrates various aspects of the Gimbal Android
+    SDK.
+
+    The sample code herein is provided for your convenience, and has not been
+    tested or designed to work on any particular system configuration. It is
+    provided pursuant to the License Agreement for Gimbal Manager AS IS, and your
+    use of this sample code, whether as provided or with any modification, is at
+    your own risk. Neither Qualcomm Retail Solutions, Inc. nor any affiliate
+    takes any liability nor responsibility with respect to the sample code, and
+    disclaims all warranties, express and implied, including without limitation
+    warranties on merchantability, fitness for a specified purpose, and against
+    infringement.
+
+-->
+<resources>
+
+    <string name="app_name">Find My Stuff</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="authorize_proximity">Authorize Proximity</string>
+    <string name="Hello_proximity_user">Welcome!!!!</string>
+    <string name="title_activity_proximitytransmitters">Transmitters</string>
+    <string name="appRegistered">App Registered !!!</string>
+    <string name="title_activity_proximityadd_transmitter">ProximityAddTransmitter</string>
+    <string name="transmiiter_id">ID</string>
+    <string name="transmitter_name">Nickname</string>
+    <string name="add">Add</string>
+    <string name="skip">Skip</string>
+    <string name="transmitterList">Loading Transmitter List ….</string>
+    <string name="Welcome">Welcome</string>
+    <string name="title_activity_proximity_bluetooth_settings">Bluetooth Settings</string>
+    <string name="bluetooth_scanning">Bluetooth Scanning</string>
+    <string name="toggle_bluetooth_scan">Toggle Bluetooth Scan</string>
+    <string name="enable_proximity_switch">Proximity</string>
+    <string name="enable_proximity_statement">Enable proximity services to use this app</string>
+    <string name="battery_level">Battery level</string>
+    <string name="refresh_now">Refresh now</string>
+    <string name="no_gimbals_observed">There don\'t appear to be any Gimbals in your vicinity.</string>
+    
+</resources>
