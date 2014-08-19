@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+    Copyright (C) 2013 Qualcomm Retail Solutions, Inc. All rights reserved.
+
+    This software is the confidential and proprietary information of Qualcomm
+    Retail Solutions, Inc.
+
+    The following sample code illustrates various aspects of the Gimbal Android
+    SDK.
+
+    The sample code herein is provided for your convenience, and has not been
+    tested or designed to work on any particular system configuration. It is
+    provided pursuant to the License Agreement for Gimbal Manager AS IS, and your
+    use of this sample code, whether as provided or with any modification, is at
+    your own risk. Neither Qualcomm Retail Solutions, Inc. nor any affiliate
+    takes any liability nor responsibility with respect to the sample code, and
+    disclaims all warranties, express and implied, including without limitation
+    warranties on merchantability, fitness for a specified purpose, and against
+    infringement.
+
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/proximitybackground2x"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/nav_bar_tile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/nav_bar_tile_2x" />
+
+        <ImageView
+            android:id="@+id/nav_icon_binocular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/nav_icon_binoculars_2x" />
+
+        <ImageButton
+            android:id="@+id/imageButton_refresh"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="14dp"
+            android:src="@android:drawable/ic_menu_rotate" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/proximitybackground2x"
+        android:divider="#b5b5b5"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/list_selector" >
+    </ListView>
+
+    <ProgressBar
+        android:id="@+id/initialProgressBar"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center" />
+    
+    <!--
+             <TextView
+          android:id="@android:id/empty"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/proximitybackground2x"
+          android:layout_gravity="center"
+          android:text="@string/appRegistered" />
+    -->
+
+</LinearLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+    Copyright (C) 2013 Qualcomm Retail Solutions, Inc. All rights reserved.
+
+    This software is the confidential and proprietary information of Qualcomm
+    Retail Solutions, Inc.
+
+    The following sample code illustrates various aspects of the Gimbal Android
+    SDK.
+
+    The sample code herein is provided for your convenience, and has not been
+    tested or designed to work on any particular system configuration. It is
+    provided pursuant to the License Agreement for Gimbal Manager AS IS, and your
+    use of this sample code, whether as provided or with any modification, is at
+    your own risk. Neither Qualcomm Retail Solutions, Inc. nor any affiliate
+    takes any liability nor responsibility with respect to the sample code, and
+    disclaims all warranties, express and implied, including without limitation
+    warranties on merchantability, fitness for a specified purpose, and against
+    infringement.
+
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gimbal.sample"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+		android:minSdkVersion="19"
+    	android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/marcopolo2x"
+        android:label="@string/app_name"
+        android:theme="@style/AppBaseTheme" >
+        
+        <activity
+            android:name="com.gimbal.sample.ProximityActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppBaseTheme" 
+            android:launchMode="singleTask" 
+            android:screenOrientation="portrait"
+			android:configChanges="keyboardHidden|orientation|screenSize" >
+            
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="proximityandroidreferenceapp" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.gimbal.sample.ProximityTransmittersActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppBaseTheme"  
+            android:screenOrientation="portrait"
+			android:configChanges="keyboardHidden|orientation|screenSize" >
+            <intent-filter>
+                <action android:name="com.example.sampleproximityusingapplication.ProximityTransmittersActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.gimbal.sample.ProximityAddTransmitter"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.example.sampleproximityusingapplication.ProximityAddTransmitter" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.gimbal.sample.ProximityBluetoothSettingsActivity"
+            android:label="@string/title_activity_proximity_bluetooth_settings" >
+        </activity>
+        
+        <!-- Third party app integration with Gimbal : START -->
+        <service
+            android:name="com.gimbal.service.ProximityService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.gimbal.sample" />
+            </intent-filter>
+        </service>
+        <!-- Third party app integration with Gimbal : END -->
+        
+    </application>
+
+</manifest>
