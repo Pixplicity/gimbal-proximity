@@ -25,7 +25,7 @@
     android:background="@drawable/proximitybackground2x" >
 
     <ListView
-        android:id="@android:id/list"
+        android:id="@+id/lv_gimbals"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/proximitybackground2x"

@@ -30,8 +30,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class TransmitterListAdapter extends BaseAdapter {
@@ -68,12 +68,12 @@ public class TransmitterListAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         this.position = position;
 
-        RelativeLayout itemView;
+        LinearLayout itemView;
         if (convertView == null) {
-            itemView = (RelativeLayout) mLayoutInflater.inflate(
+            itemView = (LinearLayout) mLayoutInflater.inflate(
                     R.layout.list_proximitytransmitters, parent, false);
         } else {
-            itemView = (RelativeLayout) convertView;
+            itemView = (LinearLayout) convertView;
         }
 
         TextView titleText = (TextView) itemView.findViewById(R.id.listTitle);
@@ -100,8 +100,7 @@ public class TransmitterListAdapter extends BaseAdapter {
         titleText.setText(transmitter.getName());
         if (transmitter.getTemperature() != null) {
             tempText.setText(Integer.toString(transmitter.getTemperature()) + "\u2109");
-        }
-        else {
+        } else {
             tempText.setText("???" + "\u2109");
         }
         int battery = 0;

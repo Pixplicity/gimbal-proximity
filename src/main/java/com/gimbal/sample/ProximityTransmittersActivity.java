@@ -21,17 +21,19 @@ package com.gimbal.sample;
 
 import java.util.LinkedHashMap;
 
-import android.app.ListActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ListView;
 
-public class ProximityTransmittersActivity extends ListActivity {
+public class ProximityTransmittersActivity extends Activity {
 
     private VisitManagerHandler manager;
     private TransmitterListAdapter adapter;
+    private ListView list;
     private View listEmpty;
 
     @Override
@@ -39,6 +41,7 @@ public class ProximityTransmittersActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         Log.d(ProximityTransmittersActivity.class.getSimpleName(), "onCreate()");
         setContentView(R.layout.activity_transmitter_list);
+        list = (ListView) findViewById(R.id.lv_gimbals);
         listEmpty = findViewById(R.id.tv_empty);
     }
 
@@ -70,7 +73,7 @@ public class ProximityTransmittersActivity extends ListActivity {
             manager = new VisitManagerHandler();
             manager.init(this);
             adapter = new TransmitterListAdapter(this, this, manager);
-            setListAdapter(adapter);
+            list.setAdapter(adapter);
             manager.startScanning();
         }
 
@@ -81,6 +84,7 @@ public class ProximityTransmittersActivity extends ListActivity {
 
             @Override
             public void run() {
+                list.setVisibility(View.VISIBLE);
                 listEmpty.setVisibility(View.GONE);
                 adapter.addTransmitters(entries);
                 adapter.notifyDataSetChanged();
