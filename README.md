@@ -1,4 +1,4 @@
-# Gimbal-Proximity
+# Gimbal Proximity SDK sample
 
 Fork and improvement of Gimbal Proximity SDK sample app:
 
