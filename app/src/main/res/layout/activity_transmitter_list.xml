@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2013 Qualcomm Retail Solutions, Inc. All rights reserved.
+
+    This software is the confidential and proprietary information of Qualcomm
+    Retail Solutions, Inc.
+
+    The following sample code illustrates various aspects of the Gimbal Android
+    SDK.
+
+    The sample code herein is provided for your convenience, and has not been
+    tested or designed to work on any particular system configuration. It is
+    provided pursuant to the License Agreement for Gimbal Manager AS IS, and your
+    use of this sample code, whether as provided or with any modification, is at
+    your own risk. Neither Qualcomm Retail Solutions, Inc. nor any affiliate
+    takes any liability nor responsibility with respect to the sample code, and
+    disclaims all warranties, express and implied, including without limitation
+    warranties on merchantability, fitness for a specified purpose, and against
+    infringement.
+
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/proximitybackground2x" >
+
+    <ListView
+        android:id="@+id/lv_gimbals"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/proximitybackground2x"
+        android:divider="#b5b5b5"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/list_selector"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:padding="48dp"
+        android:text="@string/no_gimbals_observed" />
+
+</FrameLayout>
